@@ -1,0 +1,101 @@
+.logo-part
+{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(225, 238, 238);
+    
+}
+.login-part
+{
+    
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    background-color: rgb(225, 238, 238);
+}
+.bakery-details{
+    height: 450px;
+    width: 50%;
+    
+}
+.login-form{
+    height: 450px;
+    width: 50%;
+    float: right;
+}
+#login{
+    width: 61%;
+    background-color:#7db8f0;
+    padding: 67px;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 50px;
+    height:238px ;
+   
+}
+.login-label{
+    color:#1f1c1c;
+    font-size: 18px;
+}
+.inp{
+    width: 240px;  
+    height: 30px;  
+    border-color:white ;
+    border-radius: 3px;  
+    padding-left: 8px;  
+    outline-color:#4267b2;
+}
+#login-button{
+    background:#4267b2;
+    height: 45px;
+    border-color: #29487d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 75px;
+    font-size: large;
+    outline: none;
+}
+body{
+    margin: 0;
+}
+p {
+    color: rgb(18, 84, 122);  
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-top: 0;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0;
+    display: inline;
+    
+}
+.imagecontainer
+{
+    height:55%;
+    width:10%;
+    display: inline;
+}
+.bakeryimage{
+    padding-top: 10px;
+    width: 100%;
+    height: 83%;
+    padding-left: 20px;
+}
+.contact{
+    padding-left: 20px;
+    background-color: rgb(216, 207, 207);
+    margin: 0;
+    width: 100%;
+}
+#signup-button{
+    background:#4267b2;
+    height: 30px;
+    border-color: #29487d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    font-size: small;
+    outline: none;
+}

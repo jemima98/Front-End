@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="container">
+        <div class ="logo-part">
+            <img class="image container" src="https://in.pinterest.com/pin/177892254019868795/" alt="Bakery">
+            <p>Baked In Heaven</p>
+        </div>
+        <div class =login-part>
+            <div class ="login-form">
+                <form id="login">
+                    <label class=login-label>Username</label>
+                    <br>
+                    <input class="inp" [(ngModel)]="namevalue" name="username" type="text" placeholder="Username" required><br><br>
+                    <label class="login-label">password</label>
+                    <br>
+                    <input class="inp" [(ngModel)]="passvalue" name="password" type="Password" placeholder="Password" required><br><br>
+                    <button id="login-button" (click)="login()">login</button>
+                    <br>
+                    <h4>or</h4>
+                    <button id ="signup-button">Sign up</button>
+                </form>    
+            </div>
+            <div class="bakery-details">
+                <img src="https://www.istockphoto.com/photo/cake-display-gm873169784-243858352" alt="bakery" class="bakeryimage">
+                <div class="contact">
+                    <h4>Email : {{Email}} <br>Phone : {{phone}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

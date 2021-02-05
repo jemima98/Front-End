@@ -1,0 +1,39 @@
+<div class="special-cont">
+    <div class="special-items">
+      <h3>Special Items</h3>
+      <ng-container *ngFor="let item of items"  >
+        <ul  class="items-disp">
+          <li *ngIf="item.isSpecial==true"
+            [class.selected]="item === selectedItem"
+            (click)="onSelect(item)">
+            <span class="badge">{{item.itemId}}</span>{{item.itemName}}
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+    <div class ="details" *ngIf="selectedItem">
+      <h4>{{selectedItem.itemName | uppercase}}</h4>
+      <li class ="item-details">Price per unit :{{selectedItem.price}}</li>
+      <li class ="item-details">Quantity:{{selectedItem.quantity}}</li>
+      <li class ="item-details">isVeg :{{selectedItem.isVeg}}</li>
+      <li class ="item-details">Weight in grams :{{selectedItem.weightInGrams}}</li>
+      <li class ="item-details">Kcal :{{selectedItem.kcal}}</li>
+      <li class ="item-details">availableDate :{{selectedItem.availableDate}}</li>
+    </div>
+  </div>
+  <br>
+  
+  
+  <div class="special-cont">
+    <div class ="daily-items">
+      <h3>Items</h3>
+      <ng-container *ngFor="let item of items">
+        <ul class="items-disp">
+          <li  *ngIf="item.isSpecial==false"
+            [class.selected]="item === selectedItem"
+            (click)="onSelect(item)">
+            <span class="badge">{{item.itemId}}</span> {{item.itemName}}
+          </li>
+        </ul>
+      </ng-container>
+    </div>
