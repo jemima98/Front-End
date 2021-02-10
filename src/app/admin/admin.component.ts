@@ -15,10 +15,12 @@ export class AdminComponent  {
     this.apiService.getItems().subscribe((res:any) =>{
       this.items = res
       console.log(this.items)
-    })
+    });
  
     } 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+      this.refreshItems();
+    }
 
   onClick(id:number)
   {
@@ -29,18 +31,17 @@ export class AdminComponent  {
     this.router.navigate(['/edit-item/0']);
   }
 
-  /*deleteClick(item:any){
+  deleteitem(item:any){
     if(confirm('Are you sure??')){
-      this.apiService.deleteItem(item.itemId).subscribe(data=>{
-        console.log(data)
-        this.refreshEmpList();
-      })
+      this.apiService.deleteItem(item)
+        window.location.reload();
+      }
     }
-  }
-  refreshEmpList(){
+  
+  refreshItems(){
     this.apiService.getItems().subscribe(data=>{
       this.items=data;
     });
-  }*/
+  }
       
 }

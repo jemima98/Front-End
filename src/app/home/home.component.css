@@ -56,7 +56,7 @@
     font-size: large;
     outline: none;
 }
-body{
+.container{
     margin: 0;
 }
 p {

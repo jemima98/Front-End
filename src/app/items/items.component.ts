@@ -10,18 +10,21 @@ export class ItemsComponent {
 //items :any= {};
   items:any;
   
+  
   constructor(public apiService: ApiService) {
     this.apiService.getItems().subscribe((res:any) =>{
       this.items = res
       console.log(this.items)
+      
     })
   }
-  //date :Date =new Date();
+  
   selectedItem:any;
   onSelect(item:any){
     this.selectedItem =item; 
+    
   }
-
+   
     //ngOnInit() :void{
       
     //}

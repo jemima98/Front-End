@@ -8,6 +8,12 @@
             <th>Item Name</th>  
             <th>Price</th>  
             <th>Quantity</th>
+            <th>Weight in Grams</th>
+            <th>Is Veg </th>
+            <th>Is Special</th>
+            <th>Is Kcal</th>
+            <th>Available Date</th>
+            
           </tr>  
         </thead>  
         <tbody>  
@@ -15,16 +21,22 @@
             <td class="hidden">{{item.itemId}}</td> 
             <td>{{item.itemName}}</td>  
             <td>{{item.price}}</td>  
-            <td>{{item.quantity}}</td>  
+            <td>{{item.quantity}}</td> 
+            <td>{{item.weightInGrams}}</td>
+            <td>{{item.isVeg}}</td>
+            <td>{{item.isSpecial}}</td>
+            <td>{{item.kcal}}</td>
+            <td>{{item.availableDate}}</td>
+
             <td>  
-              <button (click)="apiService.deleteItem(item)" class="btn btn-info"> Delete</button>  
+              <button (click)="deleteitem(item)" class="btn btn-info"> Delete</button>  
               <button (click)="onClick(item.itemId)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
             </td>  
-          </tr> 
-          <button (click)=addClick() class="btn btn-primary">
-            Add
-        </button> 
+          </tr>  
         </tbody>  
-      </table>  
+      </table>
+      <button id ="addbtn" (click)=addClick() class="btn btn-primary">
+        Add
+      </button>  
     </div>  
   </div>

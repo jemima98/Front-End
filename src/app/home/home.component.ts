@@ -13,9 +13,9 @@ import{Router} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   Email :string ="bakedinheaven@gmail.com";
-  Phone:string = "9987235100"
+  Phone:string = "9400557851"
 
-  users :any;
+  users :any=[];
   constructor(public apiService:ApiService,public router:Router) { 
     this.apiService.getUsers().subscribe((res:any) => {
       this.users = res
@@ -25,15 +25,28 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  namevalue :any;
-  passvalue:any;
+  
+  myusername :any;
+  mypassword:any;
   login(){
-    for (var element of this.users)
+   
+    this.users.forEach((element:any) => {
+      if((this.myusername == element.username)&&(this.mypassword== element.password))
       {
-      if((this.namevalue==element.userName)&&(this.passvalue==element.password))
-      {
-        this.router.navigateByUrl('/items');
+        if(element.isAdmin==true)
+        {
+          this.router.navigate(['/admin']);
+          console.log(this.myusername)
+        }
+        else
+        {
+          this.router.navigate(['/items']);
+        }
       }
+     
+    });
+  
     }
-    }
-}
+    
+    
+  }

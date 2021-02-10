@@ -1,39 +1,30 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class ="container">
-        <div class ="logo-part">
-            <img class="image container" src="https://in.pinterest.com/pin/177892254019868795/" alt="Bakery">
-            <p>Baked In Heaven</p>
-        </div>
-        <div class =login-part>
-            <div class ="login-form">
-                <form id="login">
-                    <label class=login-label>Username</label>
-                    <br>
-                    <input class="inp" [(ngModel)]="namevalue" name="username" type="text" placeholder="Username" required><br><br>
-                    <label class="login-label">password</label>
-                    <br>
-                    <input class="inp" [(ngModel)]="passvalue" name="password" type="Password" placeholder="Password" required><br><br>
-                    <button id="login-button" (click)="login()">login</button>
-                    <br>
-                    <h4>or</h4>
-                    <button id ="signup-button">Sign up</button>
-                </form>    
-            </div>
-            <div class="bakery-details">
-                <img src="https://www.istockphoto.com/photo/cake-display-gm873169784-243858352" alt="bakery" class="bakeryimage">
-                <div class="contact">
-                    <h4>Email : {{Email}} <br>Phone : {{phone}}</h4>
-                </div>
-            </div>
-        </div>
+<div class ="container">
+    <div class ="logo-part">
+        <img  class="imagecontainer" src="https://i.pinimg.com/originals/44/fa/b7/44fab70348c532174bf51070ec9fbd25.jpg"   alt="Bakery">
+        <p>Baked In Heaven</p>
     </div>
+    <div class =login-part>
+        <div class ="login-form">
+            <form id="login">
+                <label class=login-label>Username</label>
+                <br>
+                <input class="inp"  name="username" type ="text" placeholder="Username" [(ngModel)]="myusername"  required><br><br>
+                <label class="login-label">password</label>
+                <br>
+                <input class="inp"  name="password" type = "Password" placeholder="Password" [(ngModel)]="mypassword"  required><br><br>
+                <button id ="login-button" (click)="login()">Login</button>
+                <br><br>
+                <h4>or</h4>
+                <button id ="signup-button">Sign Up</button>
+            </form>    
+        </div>
+        <div class="bakery-details">
+            <img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8YmFrZXJ5fGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80" alt="Bakery" class ="bakeryimage">
+            <div class="contact">
+                <h4>Email : {{Email}} <br>Phone :  {{Phone}}</h4>
+            </div>
 
-</body>
-</html>
+        </div>
+    </div>        
+        
+</div>
